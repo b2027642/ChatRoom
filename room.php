@@ -1,47 +1,59 @@
-<?php 
-session_start();
-?>
-
-<!DOCTYPE html>
+<?php session_start();?>
+<!doctype html>
 <html>
 <head>
-	<title>Chat Room</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="jquery.js"></script>
-
-
-	<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#send").click(function(){
 		
-
-		$(document).ready(function(e){
-				$("#buttonSend").click(function(){
-
-					var message = $("#textarea").val();
-					$.post("check-send.php",{msg:message, send:true});
-					return false;
-				});
+		var message=$("#text").val();
+		$.post("check-send.php",{msg:message,send:true});
+		$("#text").val("");
+		return false;
 		});
-	</script>
+		function showmsg()
+		{
+			$.post("showmsg.php",function(data){
+				
+				$("#content").html(data);
+				
+				});
+		}
+	setInterval(showmsg,500);
+});
+
+</script>
+<meta charset="utf-8">
+<title>Chat Room</title>
+</head>
+
 <body>
-
-	<div id="all">
-	<div id="title">Welcome to my Chat room:<?php echo $_SESSION["user"] ?> </div>
-	<div id="content"></div>
-	</div>
-
-
-	<br>
-
-<form id="chat-form" method="post" name="form2">
-	<fieldset> 
-
-  		<textarea rows="5" type="text" id="textarea" name="textarea" placeholder="write here......." cols="50"></textarea>
-  		<br>
-		<br>
-  		<input id="buttonSend" type="submit" value="Send" name="buttonSend">
- 	</fieldset>
-
+<?php
+if(isset($_SESSION["user"]))
+{
+?>
+<div id="all">
+<div id="title"><?php echo $_SESSION["user"] ?>Welcome to the chat Room </div>
+<div id="content"></div>
+</div>
+<form>
+  <input type="text" name="text" id="text">
+  <input type="button" name="send" id="send" value="Send">
+  
 </form>
+<form action="exit.php" method="post">
+<input type="submit" value="Exit" name="exit"  id="exit">
+</form>
+<?php
+}
+else
+{
+	header("location:index.php");
+	exit;
+}
 
+?>
 </body>
 </html>

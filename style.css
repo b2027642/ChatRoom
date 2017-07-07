@@ -1,65 +1,60 @@
-
-/* styles begin */
-
-
-
-#login-form{
-
-    width: 300px;
-    border: 2px solid #ff0;
-    margin: 141px 135px 123px 781px;
-    background: #754;
-    padding: 10px;
-}
-
-.error
+#login-form
 {
-	color: #00C;
-    border: 2px solid #F00;
-    padding: 5px;
-    width: 250px;
-    /* margin-top: 174px; */
-    margin-left: 803px;
-    text-align: center;
-    font-weight: bold;
-    background: #F7A99D;
-    /* margin-bottom: 3px; */
-
+    width:240px;
+    border:2px solid #00F;
+    margin-left:550px;
+    padding:10px;
 }
-
+#msg
+{
+    color:#00C;
+    border:2px solid #F00;
+    padding:5px;
+    width:250px;
+    margin-left:550px;
+    text-align:center;
+    font-weight:bold;
+    background:#F7A99D;
+    margin-bottom:10px;
+}
 #all
 {
-	width: 650px;
-    height: 430px;
-    margin-left: 335px;
-    background: #0f6;
+    width:550px;
+    height:auto;
+    margin-left:400px;
+    border:2px solid #F00;
 }
-
-
-#title{
-	width: 640px;
-	padding: 5px;
-	background: #4cffc5;
-	font-weight: bold;
-	text-align: center;
-
-
-
+#title
+{
+    width:540px;
+    padding:5px;
+    background:#39F;
+    height:30px;
+    font-weight:bold;
+    color:#FFF;
+    text-align:center;
+    
 }
-
-#text{
-
-	width: 640px;
-	height: 360px;
-	background-color: #ffd777;
-	padding: 5px;
+#content
+{
+    width:540px;
+    height:500px;
+    background:#CCC;
+    padding:5px;
+    overflow:scroll;
+    
 }
-
-
-textarea#textarea {
-    margin-left: 475px;
-    width: 448px;
+#text
+{
+    margin-top:5px;
+    background:#CCC;
+    border:1px solid #333;
+    height:20px;
+    width:490px;
+    margin-left:400px;
 }
-#buttonSend{
-    margin-left: 797px;
+#exit
+{
+    margin-left:620px;
+    margin-top:20px;
 }
