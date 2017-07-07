@@ -26,7 +26,7 @@ $(document).ready(function(e) {
 
 </script>
 <meta charset="utf-8">
-<title>Chat Room</title>
+<title>چت روم لرن فایلز</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@ if(isset($_SESSION["user"]))
 {
 ?>
 <div id="all">
-<div id="title"><?php echo $_SESSION["user"] ?>Welcome to the chat Room </div>
+<div id="title"><?php echo $_SESSION["user"] ?> به چت روم لرن فایلز خوش آمدید</div>
 <div id="content"></div>
 </div>
 <form>

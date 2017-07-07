@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Faz's Chat Room</title>
+<title>Untitled Document</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@ if(isset($_POST["btn"]))
 {
 if(empty($_POST["username"]))
 {
-	echo '<div id="msg">Please enter a username</div>';
+	echo '<div id="msg">لطفا برای خود یک نام کاربری انتخاب نمائید</div>';
 }
 else
 {
