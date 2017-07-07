@@ -1,0 +1,65 @@
+
+/* styles begin */
+
+
+
+#login-form{
+
+    width: 300px;
+    border: 2px solid #ff0;
+    margin: 141px 135px 123px 781px;
+    background: #754;
+    padding: 10px;
+}
+
+.error
+{
+	color: #00C;
+    border: 2px solid #F00;
+    padding: 5px;
+    width: 250px;
+    /* margin-top: 174px; */
+    margin-left: 803px;
+    text-align: center;
+    font-weight: bold;
+    background: #F7A99D;
+    /* margin-bottom: 3px; */
+
+}
+
+#all
+{
+	width: 650px;
+    height: 430px;
+    margin-left: 335px;
+    background: #0f6;
+}
+
+
+#title{
+	width: 640px;
+	padding: 5px;
+	background: #4cffc5;
+	font-weight: bold;
+	text-align: center;
+
+
+
+}
+
+#text{
+
+	width: 640px;
+	height: 360px;
+	background-color: #ffd777;
+	padding: 5px;
+}
+
+
+textarea#textarea {
+    margin-left: 475px;
+    width: 448px;
+}
+#buttonSend{
+    margin-left: 797px;
+}
