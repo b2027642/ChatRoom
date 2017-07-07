@@ -13,10 +13,10 @@ if(isset($_POST["btn"]))
 {
 if(empty($_POST["username"]))
 {
-	echo '<div id="msg">لطفا برای خود یک نام کاربری انتخاب نمائید</div>';
+	echo '<div id="msg">Please enter a user name</div>';
 }
 else
-{
+{	//checkoing on user name and head redirect  to room.php
 	$_SESSION["user"]=$_POST["username"];
 	header("location:room.php");
 	exit;

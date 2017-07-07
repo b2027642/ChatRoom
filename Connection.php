@@ -2,7 +2,7 @@
 try
 {
 $server="localhost";
-$database="pdo";
+$database="chat";
 $username="root";
 $password="";
 $dsn="mysql:host=$server;dbname=$database";

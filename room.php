@@ -13,6 +13,7 @@ $(document).ready(function(e) {
 		$("#text").val("");
 		return false;
 		});
+
 		function showmsg()
 		{
 			$.post("showmsg.php",function(data){
@@ -21,21 +22,23 @@ $(document).ready(function(e) {
 				
 				});
 		}
+		//refresh every 1/2 secs to show the content using ajax
 	setInterval(showmsg,500);
 });
 
 </script>
 <meta charset="utf-8">
-<title>چت روم لرن فایلز</title>
+<title>Chat Room</title>
 </head>
 
 <body>
 <?php
-if(isset($_SESSION["user"]))
-{
-?>
+	//if there is usernsme show the below content otherwise go to the index.php page
+	if(isset($_SESSION["user"]))
+	{
+	?>
 <div id="all">
-<div id="title"><?php echo $_SESSION["user"] ?> به چت روم لرن فایلز خوش آمدید</div>
+<div id="title">Welcome to chat room:<?php echo $_SESSION["user"] ?> </div>
 <div id="content"></div>
 </div>
 <form>
